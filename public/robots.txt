@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://cnvt.me/abhi
+
+# Sitemaps
+Sitemap: https://cnvt.me/abhi/sitemap.xml

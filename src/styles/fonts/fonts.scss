@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'ssp';
+  src: url('ssp/light.woff2') format('woff2');
+  font-style: light;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ssp';
+  src: url('ssp/regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ssp';
+  src: url('ssp/bold.woff2') format('woff2');
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'sfpt';
+  src: url('sfpt/regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&display=swap');
