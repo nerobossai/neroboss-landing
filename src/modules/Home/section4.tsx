@@ -73,7 +73,12 @@ const HomeSection4 = () => {
             Integrated with some of the best agent frameworks - Solana Agent
             Kit, Zerepy, Eliza & others
           </Text>
-          <HStack spacing={3} color="primary.600" marginTop="1rem">
+          <HStack
+            spacing={3}
+            color="primary.600"
+            marginTop="1rem"
+            flexDirection={["column", "row", "row"]}
+          >
             <Button
               borderRadius="2rem"
               fontSize="14px"
