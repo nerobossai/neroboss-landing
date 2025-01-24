@@ -1,18 +1,11 @@
-import {
-  HStack,
-  Image,
-  Link,
-  List,
-  ListItem,
-  Stack,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react";
+import { Box, HStack, Image, Stack, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { FaClipboardCheck, FaRegCopy } from "react-icons/fa";
 import styled from "styled-components";
 
 import Seo from "@/components/Seo";
+import { CA } from "@/constants";
 // import Splashscreen from "@/components/Splashscreen";
 import { Meta } from "@/layouts/Meta";
 import { trackVisitor } from "@/modules/Home/services/analytics";
@@ -45,11 +38,20 @@ const Container = styled.div`
 `;
 const Index = () => {
   const router = useRouter();
+  const [showTick, setShowTick] = useState(false);
 
   useEffect(() => {
     trackVisitor();
     document.body.classList.add("home");
   }, []);
+
+  const copyCa = () => {
+    navigator.clipboard.writeText(CA);
+    setShowTick(true);
+    setTimeout(() => {
+      setShowTick(false);
+    }, 500);
+  };
 
   return (
     <>
@@ -67,8 +69,41 @@ const Index = () => {
           />
         }
       >
+        <Stack
+          backgroundColor="#2b373d"
+          borderRadius="100rem"
+          width="30vw"
+          height="50vh"
+          position="fixed"
+          left="35%"
+          filter="blur(128px)"
+          zIndex={-1000}
+        />
         <Container>
-          <Stack alignItems="center" textAlign="center" spacing="1rem">
+          <Stack
+            alignItems="center"
+            textAlign="center"
+            spacing="1rem"
+            // backdropFilter={"blur(10px)"}
+          >
+            <HStack
+              backgroundColor="white"
+              padding="0.5rem"
+              borderRadius="2rem"
+              paddingLeft="1rem"
+              paddingRight="1rem"
+              marginBottom="2rem"
+            >
+              <Text>CA: {CA}</Text>
+              <Box
+                onClick={copyCa}
+                _hover={{
+                  opacity: 0.5,
+                }}
+              >
+                {showTick ? <FaClipboardCheck color="green" /> : <FaRegCopy />}
+              </Box>
+            </HStack>
             <Text
               className="heading-home"
               fontFamily="Inter"
@@ -78,55 +113,6 @@ const Index = () => {
               <br />
               Infrastructure on X
             </Text>
-            <List>
-              <UnorderedList styleType="" spacing={3}>
-                <ListItem>
-                  <Text fontFamily="sfpt" color="gray" fontSize="20px">
-                    Architect of{" "}
-                    <Link href="https://neroboss.ai" target="_blank">
-                      <Text as="span" color="#2c4db8">
-                        Neroboss AI
-                      </Text>
-                    </Link>
-                  </Text>
-                </ListItem>
-                <ListItem>
-                  <Text fontFamily="sfpt" color="gray" fontSize="20px">
-                    Founding Engineer & Head of Engineering {"@ "}
-                    <Link href="https://martianwallet.xyz" target="_blank">
-                      <Text as="span" color="#2c4db8">
-                        Martian
-                      </Text>
-                    </Link>
-                  </Text>
-                </ListItem>
-                <ListItem>
-                  <Text fontFamily="sfpt" color="gray" fontSize="20px">
-                    Scaling Martian for Millions of Users
-                  </Text>
-                </ListItem>
-                <ListItem>
-                  <Text fontFamily="sfpt" color="gray" fontSize="20px">
-                    {"Working on Web3 <> AI DApps"}
-                  </Text>
-                </ListItem>
-                {/* <ListItem>
-                  <Text fontFamily="sfpt" color="gray" fontSize="20px">
-                    I Code in NodeJS, Python, GoLang, Rust and Sometimes in React/NextJS
-                  </Text>
-                </ListItem> */}
-                <ListItem>
-                  <Text fontFamily="sfpt" color="gray" fontSize="20px">
-                    Open Source Contributor
-                  </Text>
-                </ListItem>
-                <ListItem>
-                  <Text fontFamily="sfpt" color="gray" fontSize="20px">
-                    Databases Enthusiast
-                  </Text>
-                </ListItem>
-              </UnorderedList>
-            </List>
           </Stack>
         </Container>
         <HStack
