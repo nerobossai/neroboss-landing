@@ -1,11 +1,13 @@
-import { Box, HStack, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, Image, Stack, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FaClipboardCheck, FaRegCopy } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
 import styled from "styled-components";
 
 import Seo from "@/components/Seo";
 import { CA } from "@/constants";
+import { Paths } from "@/constants/paths";
 // import Splashscreen from "@/components/Splashscreen";
 import { Meta } from "@/layouts/Meta";
 import { trackVisitor } from "@/modules/Home/services/analytics";
@@ -32,6 +34,9 @@ const Container = styled.div`
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
   }
+  /* .read-docs-btn {
+    border-image: linear-gradient(180deg, #FFFFFF 0%, #999999 100%) 1;
+  } */
   .bg-home {
     position: absolute;
   }
@@ -73,7 +78,7 @@ const Index = () => {
           backgroundColor="#2b373d"
           borderRadius="100rem"
           width="30vw"
-          height="50vh"
+          height="60vh"
           position="fixed"
           left="35%"
           filter="blur(128px)"
@@ -113,6 +118,37 @@ const Index = () => {
               <br />
               Infrastructure on X
             </Text>
+            <Text size="20px" width={400} color="white" opacity="0.5">
+              Launch Autonomous Agents with a tweet and <br /> set them free on
+              X
+            </Text>
+            <HStack spacing="1rem" marginTop="0.5rem">
+              <Button
+                borderRadius="2rem"
+                fontSize="14px"
+                fontWeight="400"
+                rightIcon={<IoIosArrowForward />}
+                onClick={() => window.open(Paths.app, "_blank")}
+              >
+                Enter App
+              </Button>
+              <Button
+                className="read-docs-btn"
+                fontSize="14px"
+                fontWeight="400"
+                color="whitesmoke"
+                backgroundColor="transparent"
+                _hover={{
+                  opacity: 0.8,
+                }}
+                borderWidth="1px"
+                borderRadius="2rem"
+                rightIcon={<IoIosArrowForward />}
+                onClick={() => window.open(Paths.docs, "_blank")}
+              >
+                Read Docs
+              </Button>
+            </HStack>
           </Stack>
         </Container>
         <HStack
