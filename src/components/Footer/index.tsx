@@ -19,8 +19,8 @@ function Footer() {
           <Link href={Paths.twitter} target="_blank">
             <Text>Twitter</Text>
           </Link>
-          <Link href={Paths.linkedin} target="_blank">
-            <Text>LinkedIn</Text>
+          <Link href={Paths.telegram} target="_blank">
+            <Text>Telegram</Text>
           </Link>
           <Link href={Paths.github} target="_blank">
             <Text>GitHub</Text>

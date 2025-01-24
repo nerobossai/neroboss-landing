@@ -1,27 +1,20 @@
 import Head from "next/head";
 import React from "react";
 
+import { AppConfig } from "@/utils/AppConfig";
+
 function Seo() {
   return (
     <Head>
-      <title>Abhishek Vishwakarma | Software Engineer</title>
+      <title>{AppConfig.title}</title>
 
       <link rel="icon" href="/favicon.ico" />
 
-      <meta
-        name="description"
-        content="Software Engineer building future tech | Make startups go zero to one and beyond"
-      />
+      <meta name="description" content={AppConfig.description} />
 
-      <meta
-        property="og:title"
-        content="Abhishek Vishwakarma | Software Engineer"
-      />
+      <meta property="og:title" content={AppConfig.title} />
 
-      <meta
-        property="og:description"
-        content="Software Engineer building future tech | Make startups go zero to one and beyond"
-      />
+      <meta property="og:description" content={AppConfig.description} />
 
       <meta property="og:image" content="/share.jpg" />
     </Head>

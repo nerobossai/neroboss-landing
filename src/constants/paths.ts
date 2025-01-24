@@ -13,5 +13,5 @@ export const Paths = Object.freeze({
   raydium:
     "https://raydium.io/swap/?inputMint=sol&outputMint=5HTp1ebDeBcuRaP4J6cG3r4AffbP4dtcrsS7YYT7pump",
   twitter: "https://x.com/nerobossai",
-  linkedin: "https://linkedin.com/in/abhi-vishu",
+  telegram: "https://t.me/nerobossai",
 });

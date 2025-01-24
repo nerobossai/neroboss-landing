@@ -10,12 +10,12 @@ import { CA } from "@/constants";
 import { Paths } from "@/constants/paths";
 // import Splashscreen from "@/components/Splashscreen";
 import { Meta } from "@/layouts/Meta";
-import HomeSection2 from "@/modules/Home/section2";
 import { trackVisitor } from "@/modules/Home/services/analytics";
 import Main from "@/templates/Main";
+import { AppConfig } from "@/utils/AppConfig";
 
 const Container = styled.div`
-  min-height: 50vh;
+  min-height: 72vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,10 +70,7 @@ const Index = () => {
         noHeaderOnMobile
         // @ts-ignore
         meta={
-          <Meta
-            title="Neroboss"
-            description="Open Source Agent Infrastructure On X"
-          />
+          <Meta title={AppConfig.title} description={AppConfig.description} />
         }
       >
         <Stack
@@ -153,7 +150,7 @@ const Index = () => {
             </HStack>
           </Stack>
         </Container>
-        <HomeSection2 />
+        {/* <HomeSection2 /> */}
       </Main>
     </>
   );
