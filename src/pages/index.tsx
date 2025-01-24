@@ -10,12 +10,13 @@ import { CA } from "@/constants";
 import { Paths } from "@/constants/paths";
 // import Splashscreen from "@/components/Splashscreen";
 import { Meta } from "@/layouts/Meta";
+import HomeSection2 from "@/modules/Home/section2";
 import { trackVisitor } from "@/modules/Home/services/analytics";
 import Main from "@/templates/Main";
 import { AppConfig } from "@/utils/AppConfig";
 
 const Container = styled.div`
-  min-height: 72vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +29,7 @@ const Container = styled.div`
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 64px;
+    /* font-size: 64px; */
     font-weight: 700;
     line-height: 77.45px;
     letter-spacing: -3.686000108718872px;
@@ -150,7 +151,7 @@ const Index = () => {
             </HStack>
           </Stack>
         </Container>
-        {/* <HomeSection2 /> */}
+        <HomeSection2 />
       </Main>
     </>
   );
