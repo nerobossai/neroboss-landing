@@ -53,13 +53,15 @@ const HomeSection4 = () => {
         alignItems="center"
         textAlign="center"
         spacing="1rem"
+        flexDirection={["column", "row", "row"]}
         // backdropFilter={"blur(10px)"}
       >
         <Image
           src="/assets/imgs/boxes.png"
           alt="boxes"
           draggable={false}
-          hideBelow={["sm"]}
+          transform={["rotate(90deg)", "rotate(0deg)", "rotate(0deg)"]}
+          // hideBelow={["sm"]}
         />
         <Stack justifyContent="center" alignItems="center">
           <Text
@@ -121,7 +123,8 @@ const HomeSection4 = () => {
           src="/assets/imgs/boxes.png"
           alt="boxes"
           draggable={false}
-          hideBelow={["sm"]}
+          transform={["rotate(90deg)", "rotate(0deg)", "rotate(0deg)"]}
+          // hideBelow={["sm"]}
         />
       </HStack>
     </Container>
