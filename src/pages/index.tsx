@@ -1,4 +1,4 @@
-import { Box, Button, HStack, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, Stack, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FaClipboardCheck, FaRegCopy } from "react-icons/fa";
@@ -10,15 +10,17 @@ import { CA } from "@/constants";
 import { Paths } from "@/constants/paths";
 // import Splashscreen from "@/components/Splashscreen";
 import { Meta } from "@/layouts/Meta";
+import HomeSection2 from "@/modules/Home/section2";
 import { trackVisitor } from "@/modules/Home/services/analytics";
 import Main from "@/templates/Main";
 
 const Container = styled.div`
-  min-height: 72vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
   color: black;
   .heading-home {
     background: linear-gradient(180deg, #ffffff 0%, #bababa 100%),
@@ -69,8 +71,8 @@ const Index = () => {
         // @ts-ignore
         meta={
           <Meta
-            title="Abhishek Vishwakarma | Software Engineer"
-            description="Welcome to my website, folks!"
+            title="Neroboss"
+            description="Open Source Agent Infrastructure On X"
           />
         }
       >
@@ -79,7 +81,7 @@ const Index = () => {
           borderRadius="100rem"
           width="30vw"
           height="60vh"
-          position="fixed"
+          position="absolute"
           left="35%"
           filter="blur(128px)"
           zIndex={-1000}
@@ -151,25 +153,7 @@ const Index = () => {
             </HStack>
           </Stack>
         </Container>
-        <HStack
-          className="bg-home"
-          position="fixed"
-          bottom={0}
-          width="100%"
-          zIndex={-10}
-          justifyContent="space-between"
-        >
-          <Image
-            src="/assets/imgs/home-left.png"
-            alt="home-left"
-            opacity="0.5"
-          />
-          <Image
-            src="/assets/imgs/home-right.png"
-            alt="home-right"
-            opacity="0.5"
-          />
-        </HStack>
+        <HomeSection2 />
       </Main>
     </>
   );
