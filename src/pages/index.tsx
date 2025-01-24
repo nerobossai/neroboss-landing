@@ -12,6 +12,7 @@ import { Paths } from "@/constants/paths";
 import { Meta } from "@/layouts/Meta";
 import HomeSection2 from "@/modules/Home/section2";
 import HomeSection3 from "@/modules/Home/section3";
+import HomeSection4 from "@/modules/Home/section4";
 import { trackVisitor } from "@/modules/Home/services/analytics";
 import Main from "@/templates/Main";
 import { AppConfig } from "@/utils/AppConfig";
@@ -154,6 +155,7 @@ const Index = () => {
         </Container>
         <HomeSection2 />
         <HomeSection3 />
+        <HomeSection4 />
       </Main>
     </>
   );

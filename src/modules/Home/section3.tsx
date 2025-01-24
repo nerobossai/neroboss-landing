@@ -73,6 +73,7 @@ const HomeSection3 = () => {
           width={["80vw", "80vw", "60vw"]}
           src="/assets/imgs/features.png"
           alt="features"
+          draggable={false}
         />
       </Stack>
     </Container>
