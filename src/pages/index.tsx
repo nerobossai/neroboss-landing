@@ -26,16 +26,17 @@ const Container = styled.div`
   align-items: center;
   color: black;
   .heading-home {
-    background: linear-gradient(270deg, #000000 51.69%, #666666 116.49%);
+    background: linear-gradient(180deg, #FFFFFF 0%, #BABABA 100%), linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-size: 60px; */
-    font-weight: 600;
-    padding-bottom: 2rem;
-    line-height: 64.2px;
-    letter-spacing: 0.03em;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 77.45px;
+    letter-spacing: -3.686000108718872px;
     text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
   }
   .bg-home {
     position: absolute;
@@ -69,12 +70,10 @@ const Index = () => {
           <Stack alignItems="center" textAlign="center" spacing="1rem">
             <Text
               className="heading-home"
-              // fontFamily="sfpt"
-              fontFamily="Beth Ellen"
-              color="linear-gradient(270deg, #000000 51.69%, #666666 116.49%)"
+              fontFamily="Inter"
               fontSize={["40px", "40px", "60px"]}
             >
-              Software Engineer who is <br /> building future tech
+              Open Source Agent<br/>Infrastructure on X
             </Text>
             <List>
               <UnorderedList styleType="" spacing={3}>

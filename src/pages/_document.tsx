@@ -11,7 +11,7 @@ class MyDocument extends Document {
         <Head />
         <body
           className={`page-${this.props.__NEXT_DATA__.page.replace(/\//g, "")}`}
-          style={{ backgroundColor: "transparent", color: "black" }}
+          style={{ backgroundColor: "transparent", color: "white" }}
         >
           <Main />
           <NextScript />

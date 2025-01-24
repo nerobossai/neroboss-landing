@@ -12,8 +12,8 @@ const theme = extendTheme({
     Tabs: tabsTheme,
   },
   fonts: {
-    body: "sfpt",
-    heading: "sfpt",
+    body: "Inter",
+    heading: "Inter",
   },
 });
 
