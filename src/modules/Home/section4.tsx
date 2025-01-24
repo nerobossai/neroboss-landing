@@ -55,7 +55,12 @@ const HomeSection4 = () => {
         spacing="1rem"
         // backdropFilter={"blur(10px)"}
       >
-        <Image src="/assets/imgs/boxes.png" alt="boxes" draggable={false} />
+        <Image
+          src="/assets/imgs/boxes.png"
+          alt="boxes"
+          draggable={false}
+          hideBelow={["sm"]}
+        />
         <Stack justifyContent="center" alignItems="center">
           <Text
             className="heading-home"
@@ -112,7 +117,12 @@ const HomeSection4 = () => {
             </Button>
           </HStack>
         </Stack>
-        <Image src="/assets/imgs/boxes.png" alt="boxes" draggable={false} />
+        <Image
+          src="/assets/imgs/boxes.png"
+          alt="boxes"
+          draggable={false}
+          hideBelow={["sm"]}
+        />
       </HStack>
     </Container>
   );
