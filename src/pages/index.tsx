@@ -100,6 +100,7 @@ const Index = () => {
               paddingLeft="1rem"
               paddingRight="1rem"
               marginBottom="2rem"
+              fontSize={["12px", "16px"]}
             >
               <Text>CA: {CA}</Text>
               <Box
