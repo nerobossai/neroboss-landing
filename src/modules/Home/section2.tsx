@@ -78,7 +78,7 @@ const HomeSection2 = () => {
               opacity: 0.8,
             }}
             rightIcon={<FaXTwitter />}
-            onClick={() => window.open(Paths.app, "_blank")}
+            onClick={() => window.open(Paths.twitter, "_blank")}
             borderLeftWidth="1px"
             borderColor="rgba(116, 116, 116, 0.8)"
           >
