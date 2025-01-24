@@ -85,6 +85,17 @@ const HomeSection2 = () => {
             TRY ON
           </Button>
         </HStack>
+        <Stack
+          backgroundColor="rgba(255, 189, 232, 0.15)"
+          borderRadius="100rem"
+          width="80vw"
+          height="60vh"
+          position="absolute"
+          left="10%"
+          top="40%"
+          filter="blur(128px)"
+          zIndex={-1000}
+        />
         <Box
           width={["80vw", "50vw"]}
           height={["60vh", "40vh"]}

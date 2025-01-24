@@ -11,6 +11,7 @@ import { Paths } from "@/constants/paths";
 // import Splashscreen from "@/components/Splashscreen";
 import { Meta } from "@/layouts/Meta";
 import HomeSection2 from "@/modules/Home/section2";
+import HomeSection3 from "@/modules/Home/section3";
 import { trackVisitor } from "@/modules/Home/services/analytics";
 import Main from "@/templates/Main";
 import { AppConfig } from "@/utils/AppConfig";
@@ -152,6 +153,7 @@ const Index = () => {
           </Stack>
         </Container>
         <HomeSection2 />
+        <HomeSection3 />
       </Main>
     </>
   );
