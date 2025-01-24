@@ -26,7 +26,8 @@ const Container = styled.div`
   align-items: center;
   color: black;
   .heading-home {
-    background: linear-gradient(180deg, #FFFFFF 0%, #BABABA 100%), linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    background: linear-gradient(180deg, #ffffff 0%, #bababa 100%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -73,7 +74,9 @@ const Index = () => {
               fontFamily="Inter"
               fontSize={["40px", "40px", "60px"]}
             >
-              Open Source Agent<br/>Infrastructure on X
+              Open Source Agent
+              <br />
+              Infrastructure on X
             </Text>
             <List>
               <UnorderedList styleType="" spacing={3}>
