@@ -53,9 +53,16 @@ const HomeSection4 = () => {
         alignItems="center"
         textAlign="center"
         spacing="1rem"
+        flexDirection={["column", "row", "row"]}
         // backdropFilter={"blur(10px)"}
       >
-        <Image src="/assets/imgs/boxes.png" alt="boxes" draggable={false} />
+        <Image
+          src="/assets/imgs/boxes.png"
+          alt="boxes"
+          draggable={false}
+          transform={["rotate(90deg)", "rotate(0deg)", "rotate(0deg)"]}
+          // hideBelow={["sm"]}
+        />
         <Stack justifyContent="center" alignItems="center">
           <Text
             className="heading-home"
@@ -112,7 +119,13 @@ const HomeSection4 = () => {
             </Button>
           </HStack>
         </Stack>
-        <Image src="/assets/imgs/boxes.png" alt="boxes" draggable={false} />
+        <Image
+          src="/assets/imgs/boxes.png"
+          alt="boxes"
+          draggable={false}
+          transform={["rotate(90deg)", "rotate(0deg)", "rotate(0deg)"]}
+          // hideBelow={["sm"]}
+        />
       </HStack>
     </Container>
   );
