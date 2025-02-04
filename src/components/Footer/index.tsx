@@ -41,7 +41,7 @@ function Footer() {
       toast({
         title: resp.data.status === "success" ? "Subscribed" : "Error",
         description: resp.data.message,
-        status: "success",
+        status: resp.data.status === "success" ? "success" : "error",
         duration: 2000,
         isClosable: true,
       });
