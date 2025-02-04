@@ -7,8 +7,10 @@ import {
   Link,
   Stack,
   Text,
+  useToast,
 } from "@chakra-ui/react";
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import { Paths } from "@/constants/paths";
@@ -21,6 +23,42 @@ const Container = styled.footer`
 `;
 
 function Footer() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const toast = useToast();
+
+  const subscribe = async () => {
+    try {
+      setIsLoading(true);
+      const resp = await axios.post(
+        "https://api.neroboss.ai/public/subscribe",
+        {
+          email,
+        },
+      );
+
+      console.log(resp);
+      toast({
+        title: resp.data.status === "success" ? "Subscribed" : "Error",
+        description: resp.data.message,
+        status: "success",
+        duration: 2000,
+        isClosable: true,
+      });
+    } catch (err) {
+      console.log(err);
+      toast({
+        title: "Error",
+        description: "Sorry something went wrong!",
+        status: "error",
+        duration: 2000,
+        isClosable: true,
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <Container>
       <HStack
@@ -37,7 +75,7 @@ function Footer() {
           paddingBottom={["1rem", "2rem", "2rem"]}
         >
           {/* <ServiceStatus /> */}
-          <Stack mb="1rem" width="20vw" ml="2rem">
+          <Stack mb="1rem" width={["100vw", "100%", "20vw"]} ml="2rem">
             <Text opacity={0.5}>Get Neroboss Updates</Text>
             <InputGroup>
               <Input
@@ -46,9 +84,12 @@ function Footer() {
                 fontSize={13}
                 colorScheme="gray"
                 type="email"
+                onChange={(e) => setEmail(e.target.value)}
               />
               <InputRightElement width="6rem">
-                <Button fontSize={13}>Subscribe</Button>
+                <Button fontSize={13} isLoading={isLoading} onClick={subscribe}>
+                  Subscribe
+                </Button>
               </InputRightElement>
             </InputGroup>
           </Stack>
