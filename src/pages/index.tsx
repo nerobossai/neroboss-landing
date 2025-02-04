@@ -53,7 +53,12 @@ const Index = () => {
   useEffect(() => {
     trackVisitor();
     document.body.classList.add("home");
-  }, []);
+
+    const { show } = router.query;
+    if (show === "newsletter") {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+  }, [router.query]);
 
   const copyCa = () => {
     navigator.clipboard.writeText(CA);

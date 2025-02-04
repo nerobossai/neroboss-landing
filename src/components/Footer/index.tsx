@@ -1,10 +1,17 @@
-import { HStack, Link, Stack, Text } from "@chakra-ui/react";
+import {
+  Button,
+  HStack,
+  Input,
+  InputGroup,
+  InputRightElement,
+  Link,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import React from "react";
 import styled from "styled-components";
 
 import { Paths } from "@/constants/paths";
-
-import { ServiceStatus } from "../Svgs/ServiceStatus";
 
 const Container = styled.footer`
   width: 100%;
@@ -29,7 +36,22 @@ function Footer() {
           paddingLeft={["0rem", "2rem", "2rem"]}
           paddingBottom={["1rem", "2rem", "2rem"]}
         >
-          <ServiceStatus />
+          {/* <ServiceStatus /> */}
+          <Stack mb="1rem" width="20vw" ml="2rem">
+            <Text opacity={0.5}>Get Neroboss Updates</Text>
+            <InputGroup>
+              <Input
+                pr="4.5rem"
+                placeholder="Your Email"
+                fontSize={13}
+                colorScheme="gray"
+                type="email"
+              />
+              <InputRightElement width="6rem">
+                <Button fontSize={13}>Subscribe</Button>
+              </InputRightElement>
+            </InputGroup>
+          </Stack>
           <Text opacity={0.5}>
             Copyright © All rights by Keygen Labs, Inc.
           </Text>
